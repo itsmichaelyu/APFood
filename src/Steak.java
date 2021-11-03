@@ -92,7 +92,7 @@ public class Steak extends Food {
 
     @Override
     public String toString() {
-        return "name = \"" + getName() + '\"' +
+        return "Name = \"" + getName() + '\"' +
                 "\nChef: " + getChef() +
                 "\nChef Skill: " + getChefSkill() +
                 "\nRareness: " + getRareness() +

@@ -70,7 +70,7 @@ public class Food{
     }
 
     public String toString(){
-        return "\nFood: \"" + getName() + "\n" +
+        return "Name: \"" + getName() +
                 "\nAmount: " + getAmount() +
                 "\nWeight: " + getWeight() +
                 "\nFresh: " + getIsFresh() +
