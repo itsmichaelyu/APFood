@@ -32,7 +32,7 @@ public class Cheese extends Food{
 
     @Override
     public String toString() {
-        return "name = \"" + getName() + '\"' +
+        return "Name = \"" + getName() + '\"' +
                 "\nIs Moldy: " + getIsMoldy() +
                 "\nHas Holes: " + getHasHoles() +
                 "\nAmount: " + getAmount() +
