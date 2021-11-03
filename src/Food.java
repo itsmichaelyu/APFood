@@ -9,13 +9,14 @@ public class Food{
     private boolean hasBeenEatenByRat;
 
 
-    public Food(String name, int amount, double weight, boolean isFresh, boolean isGood, int calories) {
+    public Food(String name, int amount, double weight, boolean isFresh, boolean isGood, int calories, boolean hasBeenEatenByRat) {
         this.name = name;
         this.amount = amount;
         this.weight = weight;
         this.isFresh = isFresh;
         this.isGood = isGood;
         this.calories = calories;
+        this.hasBeenEatenByRat = hasBeenEatenByRat;
     }
 
     public String getName() {

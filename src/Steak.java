@@ -38,8 +38,8 @@ public class Steak extends Food {
     private Rareness rareness;
     private Chef chef;
 
-    public Steak(String name, int amount, double weight, boolean isFresh, boolean isGood, int calories, Rareness rareness, Chef chef) {
-        super(name, amount, weight, isFresh, isGood, calories);
+    public Steak(String name, int amount, double weight, boolean isFresh, boolean isGood, int calories, boolean hasBeenEatenByRat, Rareness rareness, Chef chef) {
+        super(name, amount, weight, isFresh, isGood, calories, hasBeenEatenByRat);
         this.rareness = rareness;
         this.chef = chef;
     }

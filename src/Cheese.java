@@ -3,8 +3,8 @@ public class Cheese extends Food{
     private boolean isMoldy;
     private boolean hasHoles;
 
-    public Cheese (String name, int amount, double weight, boolean isFresh, boolean isGood, int calories, boolean isMoldy, boolean hasHoles) {
-        super(name, amount, weight, isFresh, isGood, calories);
+    public Cheese (String name, int amount, double weight, boolean isFresh, boolean isGood, int calories, boolean hasBeenEatenByRat, boolean isMoldy, boolean hasHoles) {
+        super(name, amount, weight, isFresh, isGood, calories, hasBeenEatenByRat);
         this.isMoldy = isMoldy;
         this.hasHoles = hasHoles;
     }
