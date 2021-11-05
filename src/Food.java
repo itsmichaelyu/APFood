@@ -1,5 +1,3 @@
-import org.jetbrains.annotations.NotNull;
-
 public class Food{
 
     private String name;
@@ -70,7 +68,7 @@ public class Food{
         this.isGood = isGood;
     }
 
-    public boolean run(@NotNull String command) {
+    public boolean run(String command) {
         switch (command) {
             case "eat": eat(); return true;
             case "throw up": throwUp(); return true;
