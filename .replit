@@ -1,2 +1,2 @@
 language = "java10"
-run = "java src/Main.java"
+run = "bash bash.sh"
