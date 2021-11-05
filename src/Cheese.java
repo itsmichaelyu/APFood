@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 public class Cheese extends Food{
 
     private boolean isMoldy;
@@ -23,6 +25,22 @@ public class Cheese extends Food{
 
     public void addHoles() {
         hasHoles = true;
+    }
+
+
+    @Override
+    public boolean run(@NotNull String command) {
+        switch (command) {
+            case "eat": eat(); return true;
+            case "throw up": throwUp(); return true;
+            case "feed rats": eatByRat(); return true;
+            case "good": rate(true); return true;
+            case "bad": rate(false); return true;
+            case "forget": age(); return true;
+            case "cut": addHoles(); return true;
+            case "help": System.out.println("Options: eat, throw up, feed rats, good, bad, forget, cut"); return false;
+            default: return false;
+        }
     }
 
     @Override

@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 public class Food{
 
     private String name;
@@ -7,7 +9,6 @@ public class Food{
     private boolean isGood;
     private int calories;
     private boolean hasBeenEatenByRat;
-
 
     public Food(String name, int amount, double weight, boolean isFresh, boolean isGood, int calories, boolean hasBeenEatenByRat) {
         this.name = name;
@@ -69,8 +70,20 @@ public class Food{
         this.isGood = isGood;
     }
 
+    public boolean run(@NotNull String command) {
+        switch (command) {
+            case "eat": eat(); return true;
+            case "throw up": throwUp(); return true;
+            case "feed rats": eatByRat(); return true;
+            case "good": rate(true); return true;
+            case "bad": rate(false); return true;
+            case "help": System.out.println("Options: eat, throw up, feed rats, good, bad"); return false;
+            default: return false;
+        }
+    }
+
     public String toString(){
-        return "Name: \"" + getName() +
+        return "Name: \"" + getName() + "\"" +
                 "\nAmount: " + getAmount() +
                 "\nWeight: " + getWeight() +
                 "\nFresh: " + getIsFresh() +

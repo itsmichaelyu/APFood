@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.util.*;
 
 public class Steak extends Food {
@@ -82,6 +84,21 @@ public class Steak extends Food {
                 break;
             }
             temp = r == rareness;
+        }
+    }
+
+    @Override
+    public boolean run(@NotNull String command) {
+        switch (command) {
+            case "eat": eat(); return true;
+            case "throw up": throwUp(); return true;
+            case "feed rats": eatByRat(); return true;
+            case "good": rate(true); return true;
+            case "bad": rate(false); return true;
+            case "cook": cook(); return true;
+            case "freeze": freeze(); return true;
+            case "help": System.out.println("Options: eat, throw up, feed rats, good, bad, cook, freeze"); return false;
+            default: return false;
         }
     }
 
