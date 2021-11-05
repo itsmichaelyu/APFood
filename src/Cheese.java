@@ -1,5 +1,3 @@
-import org.jetbrains.annotations.NotNull;
-
 public class Cheese extends Food{
 
     private boolean isMoldy;

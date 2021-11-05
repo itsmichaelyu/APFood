@@ -1,5 +1,3 @@
-import org.jetbrains.annotations.NotNull;
-
 public class Food{
 
     private String name;
