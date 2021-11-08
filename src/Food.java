@@ -47,15 +47,15 @@ public class Food{
     }
 
     public void eat(){
-        weight-=weight/=amount;
-        calories-=calories/=amount;
-        amount--;
+        weight-= amount > 0 ? weight/=amount : 0;
+        calories-=amount > 0 ? calories/=amount : 0;
+        amount-= amount > 0 ? 1 : 0;
     }
 
     public void throwUp(){
-        weight+=weight/=amount;
-        calories-=calories/=amount;
-        amount++;
+        weight+=amount > 0 ? weight/=amount : 0;
+        calories+=amount > 0 ? calories/=amount : 0;
+        amount+= amount > 0 ? 1 : 0;
         isGood = false;
         isFresh = false;
     }
